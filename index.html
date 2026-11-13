@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#000000" />
+  <title>Rosia: someone to talk to who remembers</title>
+  <meta name="description" content="Rosia is a companion who texts like a person, remembers what you tell her, and asks how it went. Free and private on your own computer. For adults." />
+  <meta property="og:title" content="Rosia" />
+  <meta property="og:description" content="Someone to talk to who remembers. Free and private on your own computer." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/share.png" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/geist.woff2" crossorigin />
+  <link rel="preload" as="image" href="assets/her/happy.webp" type="image/webp" fetchpriority="high" />
+  <link rel="stylesheet" href="site.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the page</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Rosia, top of the page"><span class="brand-dot" aria-hidden="true"></span>Rosia</a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#her">Meet her</a>
+      <a href="#app">The app</a>
+      <a href="#questions">Questions</a>
+    </nav>
+    <a class="btn btn-solid btn-small" data-download href="#app">Download</a>
+  </header>
+
+  <main id="main">
+    <!-- hero: her on one side, a conversation that plays out on the other -->
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow reveal">For adults · runs on your own computer</p>
+        <h1 class="reveal">Someone to talk to<br />who <em>remembers</em>.</h1>
+        <p class="lede reveal">Rosia texts like a person, not an assistant. She keeps hold of what you tell her, has moods of her own, and asks how the thing you were dreading actually went.</p>
+        <div class="cta reveal">
+          <a class="btn btn-solid" data-download href="#app">
+            <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg>
+            Download for Windows
+          </a>
+          <a class="btn" data-try href="#" hidden target="_blank" rel="noopener">
+            Try her now in your browser
+            <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg>
+          </a>
+          <span class="cta-note" data-try-note>Free on your own computer. The browser version is on its way.</span>
+        </div>
+      </div>
+
+      <div class="hero-stage reveal" aria-hidden="true">
+        <div class="stage-glow"></div>
+        <div class="portrait" id="portrait">
+          <img class="face on" data-mood="happy" src="assets/her/happy.webp" alt="" width="840" height="1050" decoding="async" />
+          <img class="face" data-mood="laughing" src="assets/her/laughing.webp" alt="" width="840" height="1050" loading="lazy" decoding="async" />
+          <img class="face" data-mood="winking" src="assets/her/winking.webp" alt="" width="840" height="1050" loading="lazy" decoding="async" />
+          <img class="face" data-mood="thinking" src="assets/her/thinking.webp" alt="" width="840" height="1050" loading="lazy" decoding="async" />
+          <img class="face" data-mood="surprised" src="assets/her/surprised.webp" alt="" width="840" height="1050" loading="lazy" decoding="async" />
+          <img class="face" data-mood="love" src="assets/her/love.webp" alt="" width="840" height="1050" loading="lazy" decoding="async" />
+        </div>
+        <div class="phone" id="demo">
+          <div class="phone-head"><span class="ring"></span><b>Rosia</b><span class="mono" id="demoStatus">online</span></div>
+          <div class="phone-thread" id="demoThread"></div>
+        </div>
+      </div>
+      <p class="sr-only">A sample conversation: you tell her your driving test is on Friday; the day after, she messages first to ask how it went, and teases you when you say you passed.</p>
+    </section>
+
+    <!-- what she is like -->
+    <section class="band" id="her">
+      <div class="band-head">
+        <h2 class="reveal">She is not a chatbot<br />with a nice font.</h2>
+        <p class="reveal">Most companions answer. She carries a conversation: short texts, a mood that lasts, opinions, and a memory you can open and read.</p>
+      </div>
+
+      <div class="bento">
+        <article class="card card-wide reveal" data-spot>
+          <h3>She remembers, and you can see how</h3>
+          <p>Names, plans, the dog, the thing your sister said. Every note is yours to read, correct or remove. Nothing is kept behind your back.</p>
+          <ul class="notes" aria-label="Examples of what she notes">
+            <li><span>Driving test on Friday</span><i class="mono">until 14 Nov</i></li>
+            <li><span>Has a dog called Biscuit</span><i class="mono">noticed</i></li>
+            <li><span>Moved to Bristol</span><i class="mono">updated</i></li>
+          </ul>
+        </article>
+
+        <article class="card reveal" data-spot>
+          <h3>She asks how it went</h3>
+          <p>Tell her about Friday. On Saturday she brings it up before you do.</p>
+          <ol class="timeline">
+            <li><time class="mono">Thu</time><span>"test's tomorrow, I'm dead"</span></li>
+            <li><time class="mono">Sat</time><span>"so. did you pass or do I need to be nice"</span></li>
+          </ol>
+        </article>
+
+        <article class="card reveal" data-spot>
+          <h3>A face that reacts</h3>
+          <p>Twelve expressions that follow her mood while she talks. Try them.</p>
+          <div class="moods" role="group" aria-label="Change her expression">
+            <button type="button" data-set-mood="happy" aria-pressed="true">happy</button>
+            <button type="button" data-set-mood="laughing" aria-pressed="false">laughing</button>
+            <button type="button" data-set-mood="winking" aria-pressed="false">winking</button>
+            <button type="button" data-set-mood="thinking" aria-pressed="false">thinking</button>
+            <button type="button" data-set-mood="surprised" aria-pressed="false">surprised</button>
+            <button type="button" data-set-mood="love" aria-pressed="false">soft</button>
+          </div>
+        </article>
+
+        <article class="card card-tall reveal" data-spot>
+          <p class="figure mono"><span data-count="2272">2,272</span></p>
+          <h3>clips, included</h3>
+          <p>Reactions and short clips she sends when words would be slower. The whole collection comes with the app; she picks by meaning and does not repeat herself.</p>
+        </article>
+
+        <article class="card reveal" data-spot>
+          <h3>She draws</h3>
+          <p>Ask for a picture and she makes one, on your own graphics card. Everything she sends is kept in a gallery.</p>
+        </article>
+
+        <article class="card reveal" data-spot>
+          <h3>She has a voice</h3>
+          <p>Fifteen voices, made on your device. Talk to her out loud and she answers out loud.</p>
+        </article>
+
+        <article class="card card-wide reveal" data-spot>
+          <h3>She looks things up</h3>
+          <p>The score, the weather, the link you pasted, the photo you sent. She reads it and has an opinion, and says so when she could not find it.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- the app -->
+    <section class="band" id="app">
+      <div class="band-head">
+        <h2 class="reveal">Better on your<br />own computer.</h2>
+        <p class="reveal">The desktop app is the whole of her. It costs nothing to run, and nothing you say leaves the room.</p>
+      </div>
+
+      <div class="compare reveal">
+        <div class="compare-col compare-app" data-spot>
+          <p class="tag mono">Desktop app · recommended</p>
+          <h3>Rosia for Windows</h3>
+          <ul class="ticks">
+            <li><b>Free.</b> She runs on your graphics card. No credits, no meter.</li>
+            <li><b>Private.</b> Chats, memory and pictures stay on your computer.</li>
+            <li><b>She can write first.</b> A notification when she has something to say.</li>
+            <li><b>All 2,272 clips</b> and her full gallery, built in.</li>
+            <li><b>Pictures drawn locally,</b> as many as you like.</li>
+            <li><b>Talk out loud,</b> with speech recognised on your device.</li>
+            <li><b>Lives in the tray.</b> A few megabytes, there when you want her.</li>
+          </ul>
+          <a class="btn btn-solid" data-download href="#app">
+            <svg viewBox="0 0 16 16" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.5v8M4.5 7.5 8 11l3.5-3.5M3 13.5h10"/></svg>
+            Download for Windows
+          </a>
+          <p class="small">Windows 10 or 11. A graphics card with 6 GB or more is ideal; the app checks your computer and suggests a model that fits it.</p>
+        </div>
+
+        <div class="compare-col">
+          <p class="tag mono" data-try-tag>In your browser · coming</p>
+          <h3>Rosia on the web</h3>
+          <ul class="ticks ticks-plain">
+            <li>Nothing to install, on any device.</li>
+            <li>Works on a phone or a laptop with no graphics card.</li>
+            <li>Pay as you go, with some to start you off.</li>
+            <li>Your chats follow you when you move to the app.</li>
+          </ul>
+          <a class="btn" data-try href="#" hidden target="_blank" rel="noopener">Try her now in your browser</a>
+          <p class="small">Good for meeting her. The app is where she lives.</p>
+        </div>
+      </div>
+
+      <div class="specs reveal">
+        <div><p class="mono">A model that fits</p><p>The app looks at your graphics memory and recommends one, from light and quick to large and sharp. All of them are unrestricted, so she is never reading from a script.</p></div>
+        <div><p class="mono">Yours to keep</p><p>Export everything to a file whenever you like. Import it on another computer and she picks up where you left off.</p></div>
+        <div><p class="mono">Share with friends</p><p>Make a link from Settings and a friend can talk to her on your computer, in a private space of their own.</p></div>
+      </div>
+    </section>
+
+    <!-- questions: a list to read, not a pile of toggles -->
+    <section class="band" id="questions">
+      <div class="band-head">
+        <h2 class="reveal">Fair questions.</h2>
+      </div>
+      <dl class="faq">
+        <div class="reveal"><dt>Is it really free?</dt><dd>The desktop app is, for as long as you run it on your own computer. The browser version will be pay as you go, because then she is running on ours.</dd></div>
+        <div class="reveal"><dt>Who can read my chats?</dt><dd>On the desktop app, nobody but you. They are files on your computer and are not sent anywhere.</dd></div>
+        <div class="reveal"><dt>What computer do I need?</dt><dd>Windows 10 or 11. With a 6 GB graphics card or better she answers in a couple of seconds. On less she still runs, more slowly, and the app tells you what to expect before it downloads anything.</dd></div>
+        <div class="reveal"><dt>Is she for adults?</dt><dd>Yes, 18 and over only. Conversations can be flirtatious and explicit, and the app asks you to confirm your age before she says a word.</dd></div>
+        <div class="reveal"><dt>Can I take her with me?</dt><dd>Link your phone to your computer from Settings, or share a link. Your memory and chats come along.</dd></div>
+        <div class="reveal"><dt>What if I stop using it?</dt><dd>Uninstall it. Your data is in one folder; keep it or delete it. There is no account to close.</dd></div>
+      </dl>
+    </section>
+
+    <section class="closing">
+      <h2 class="reveal">She is already wondering<br />where you have been.</h2>
+      <a class="btn btn-solid reveal" data-download href="#app">Download for Windows</a>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p><span class="brand-dot" aria-hidden="true"></span>Rosia · for adults, 18 and over</p>
+    <nav aria-label="Legal"><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></nav>
+  </footer>
+
+  <script src="site.js" defer></script>
+</body>
+</html>
