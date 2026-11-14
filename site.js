@@ -10,6 +10,11 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
 for (const a of $$('[data-download]')) a.href = DOWNLOAD_URL;
 
+/* After a click on Download: how to run the installer (as administrator), and what to do if Windows hesitates. */
+const toast = $('#installToast');
+for (const a of $$('[data-download]')) a.addEventListener('click', () => { toast.hidden = false; });
+$('#installToastClose')?.addEventListener('click', () => { toast.hidden = true; });
+
 /* "Try her now in your browser": the address is kept in try.json, so a new link is one small edit. While it is empty the
    buttons stay hidden and the page talks about the browser version as coming. */
 async function tryLink() {
@@ -137,7 +142,8 @@ function countUp() {
   const el = $('[data-count]');
   if (!el) return;
   const target = Number(el.dataset.count);
-  const show = (n) => { el.textContent = Math.round(n).toLocaleString('en-GB'); };
+  const plus = el.hasAttribute('data-plus') ? '+' : '';
+  const show = (n) => { el.textContent = `${Math.round(n).toLocaleString('en-GB')}${plus}`; };
   if (calm || !('IntersectionObserver' in window)) return show(target);
   show(0);
   const io = new IntersectionObserver(([entry]) => {

@@ -193,3 +193,9 @@ h3 { font-size: 17px; font-weight: 600; letter-spacing: -0.02em; }
   .portrait, .msg, .dots i { animation: none; }
   .card:hover { transform: none; }
 }
+
+.install-note { font-size: 13px; color: var(--ink-2); line-height: 1.55; padding: 10px 12px; border: 1px solid var(--line-2); border-radius: 10px; }
+.install-note b { color: var(--ink); }
+.install-toast { position: fixed; z-index: 40; right: 20px; bottom: 20px; width: min(380px, calc(100vw - 40px)); padding: 16px 18px; background: var(--panel); border: 1px solid var(--line-2); border-radius: 14px; box-shadow: 0 24px 70px rgba(0, 0, 0, 0.7); display: grid; gap: 8px; font-size: 14px; animation: pop 320ms var(--ease) both; }
+.install-toast b { color: var(--ink); }
+.install-toast .btn { justify-self: start; }

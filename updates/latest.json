@@ -1,0 +1,10 @@
+{
+  "app": "rosia",
+  "version": "0.1.5",
+  "publishedAt": "2026-11-14T07:01:26.164Z",
+  "notes": "Install ComfyUI and her picture style from Settings. Fixes.",
+  "url": "rosia-0.1.5.zip",
+  "sha256": "4fbd125ed44740a93978d81876340483876bcf21773e3fd6c95076972b94f941",
+  "size": 426667,
+  "signature": "Ae9t5oCmU4INEFCJMi3jhCIvFJCU+mT72IAfeseXfHMeCu/c/nHqq0DrLwskLJ4Ib8ITPRf3W/ZZmZ2vXEOxAw=="
+}
