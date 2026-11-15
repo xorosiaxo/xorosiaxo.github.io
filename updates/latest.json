@@ -1,10 +1,10 @@
 {
   "app": "rosia",
-  "version": "0.1.5",
-  "publishedAt": "2026-11-14T07:01:26.164Z",
-  "notes": "Install ComfyUI and her picture style from Settings. Fixes.",
-  "url": "rosia-0.1.5.zip",
-  "sha256": "4fbd125ed44740a93978d81876340483876bcf21773e3fd6c95076972b94f941",
-  "size": 426667,
-  "signature": "Ae9t5oCmU4INEFCJMi3jhCIvFJCU+mT72IAfeseXfHMeCu/c/nHqq0DrLwskLJ4Ib8ITPRf3W/ZZmZ2vXEOxAw=="
+  "version": "0.2.0",
+  "publishedAt": "2026-11-15T22:49:33.397Z",
+  "notes": "Famous songs from YouTube Music, reminders, running jokes, she learns your music taste, a locked diary she writes in, look at your screen, games, watching videos together, voice calls, and she remembers your birthday.",
+  "url": "rosia-0.2.0.zip",
+  "sha256": "f5a978dad5756d0360391808e4369830450d69b63f422effddbf1f7a3fbcf986",
+  "size": 555376,
+  "signature": "q8Si717e8Fjm5l+bv6GBZ3Nf/xPCOxildxEDGuZaDa1TUhosSpE69yxW0ZvqTPe8ygrPwZ5DpGKXQQRV8RpLAg=="
 }

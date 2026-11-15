@@ -1,14 +1,49 @@
 /* Rosia: the website. A conversation that plays itself, a face that follows it, and things that arrive as you scroll. */
 
-// Where the Download buttons lead. Point this at the installer once a release is published.
-const DOWNLOAD_URL = 'https://github.com/xorosiaxo/xorosiaxo.github.io/releases/latest';
+// Where the Download buttons lead: straight to the installer in the newest release on GitHub, so a click downloads it
+// rather than opening the releases page. Until GitHub has answered (or if it cannot be reached), the releases page.
+const RELEASES = 'https://github.com/xorosiaxo/xorosiaxo.github.io/releases/latest';
+const LATEST = 'https://api.github.com/repos/xorosiaxo/xorosiaxo.github.io/releases/latest';
 
 const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
-for (const a of $$('[data-download]')) a.href = DOWNLOAD_URL;
+for (const a of $$('[data-download]')) a.href = RELEASES;
+
+/** The installer's own download address from the newest release (the .exe attached to it), kept for a day. */
+async function installerLink() {
+  try {
+    const kept = JSON.parse(localStorage.getItem('rosia.installer') || 'null');
+    if (kept?.url && Date.now() - kept.at < 86_400_000) return kept.url;
+  } catch {
+    /* nothing kept */
+  }
+  try {
+    const res = await fetch(LATEST, { headers: { accept: 'application/vnd.github+json' } });
+    if (!res.ok) return '';
+    const release = await res.json();
+    const exe = (release.assets || []).find((a) => /setup.*\.exe$|\.exe$/i.test(a.name));
+    if (!exe?.browser_download_url) return '';
+    try {
+      localStorage.setItem('rosia.installer', JSON.stringify({ url: exe.browser_download_url, at: Date.now() }));
+    } catch {
+      /* private window: asked again next time */
+    }
+    return exe.browser_download_url;
+  } catch {
+    return '';
+  }
+}
+
+installerLink().then((url) => {
+  if (!url) return;
+  for (const a of $$('[data-download]')) {
+    a.href = url;
+    a.setAttribute('download', '');
+  }
+});
 
 /* After a click on Download: how to run the installer (as administrator), and what to do if Windows hesitates. */
 const toast = $('#installToast');

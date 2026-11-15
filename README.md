@@ -27,5 +27,9 @@ Cloudflare tunnel on your own domain keeps one address for good.
 
 ## Download buttons
 
-They point at `DOWNLOAD_URL` at the top of `site.js`: the latest release of `xorosiaxo/xorosiaxo.github.io`. Publish the
-installer there (Releases, Draft a new release, attach `Rosia_<version>_x64-setup.exe`).
+They download the installer straight from GitHub: `site.js` asks GitHub for the newest release of
+`xorosiaxo/xorosiaxo.github.io` and points every Download button at the `.exe` attached to it (kept for a day in the
+visitor's browser). Until GitHub answers, or if it cannot be reached, they open the releases page instead.
+
+To publish a new installer: Releases, Draft a new release, tag `v<version>`, attach `Rosia_<version>_x64-setup.exe`
+(from `desktop/src-tauri/target/release/bundle/nsis/`), publish. Nothing on the site has to change.
