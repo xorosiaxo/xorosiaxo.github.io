@@ -12,28 +12,33 @@ const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
 for (const a of $$('[data-download]')) a.href = RELEASES;
 
-/** The installer's own download address from the newest release (the .exe attached to it), kept for a day. */
+/**
+ * The installer's own download address from the newest release (the .exe attached to it). GitHub is asked on every
+ * visit, so a new release is what downloads straight away; the last answer is kept only for when GitHub cannot be
+ * reached (it allows each visitor about 60 questions an hour).
+ */
 async function installerLink() {
+  const saved = () => {
+    try {
+      return JSON.parse(localStorage.getItem('rosia.installer') || 'null')?.url || '';
+    } catch {
+      return '';
+    }
+  };
   try {
-    const kept = JSON.parse(localStorage.getItem('rosia.installer') || 'null');
-    if (kept?.url && Date.now() - kept.at < 86_400_000) return kept.url;
-  } catch {
-    /* nothing kept */
-  }
-  try {
-    const res = await fetch(LATEST, { headers: { accept: 'application/vnd.github+json' } });
-    if (!res.ok) return '';
+    const res = await fetch(LATEST, { headers: { accept: 'application/vnd.github+json' }, cache: 'no-store' });
+    if (!res.ok) return saved();
     const release = await res.json();
     const exe = (release.assets || []).find((a) => /setup.*\.exe$|\.exe$/i.test(a.name));
-    if (!exe?.browser_download_url) return '';
+    if (!exe?.browser_download_url) return saved();
     try {
       localStorage.setItem('rosia.installer', JSON.stringify({ url: exe.browser_download_url, at: Date.now() }));
     } catch {
-      /* private window: asked again next time */
+      /* private window: nothing to fall back on next time */
     }
     return exe.browser_download_url;
   } catch {
-    return '';
+    return saved();
   }
 }
 
