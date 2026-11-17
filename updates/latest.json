@@ -1,10 +1,10 @@
 {
   "app": "rosia",
-  "version": "0.2.0",
-  "publishedAt": "2026-11-15T22:49:33.397Z",
-  "notes": "Famous songs from YouTube Music, reminders, running jokes, she learns your music taste, a locked diary she writes in, look at your screen, games, watching videos together, voice calls, and she remembers your birthday.",
-  "url": "rosia-0.2.0.zip",
-  "sha256": "f5a978dad5756d0360391808e4369830450d69b63f422effddbf1f7a3fbcf986",
-  "size": 555376,
-  "signature": "q8Si717e8Fjm5l+bv6GBZ3Nf/xPCOxildxEDGuZaDa1TUhosSpE69yxW0ZvqTPe8ygrPwZ5DpGKXQQRV8RpLAg=="
+  "version": "0.2.1",
+  "publishedAt": "2026-11-17T07:44:43.875Z",
+  "notes": "She understands requests the way people really type them: a small router works out what you want (a song, a video, a game, a reminder) by meaning, not exact words, so she does it instead of only saying so. Replies stream in live. Fixes for music and video requests.",
+  "url": "rosia-0.2.1.zip",
+  "sha256": "cca981a0f45b6e77b0ae4cdbc96f882bc3a1720c028e3d2395244f76638a904f",
+  "size": 571994,
+  "signature": "4BDuHtMSdSQ60MdFPxlWa9rgV6EhbKJFfnFPfX8C4SqPDtH7vkqfWLGYlw9ogOeWF1vPNHC4ajnAsBa1dd39CQ=="
 }
