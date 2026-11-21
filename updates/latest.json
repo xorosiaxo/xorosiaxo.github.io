@@ -1,10 +1,10 @@
 {
   "app": "rosia",
-  "version": "0.2.1",
-  "publishedAt": "2026-11-17T07:44:43.875Z",
-  "notes": "She understands requests the way people really type them: a small router works out what you want (a song, a video, a game, a reminder) by meaning, not exact words, so she does it instead of only saying so. Replies stream in live. Fixes for music and video requests.",
-  "url": "rosia-0.2.1.zip",
-  "sha256": "cca981a0f45b6e77b0ae4cdbc96f882bc3a1720c028e3d2395244f76638a904f",
-  "size": 571994,
-  "signature": "4BDuHtMSdSQ60MdFPxlWa9rgV6EhbKJFfnFPfX8C4SqPDtH7vkqfWLGYlw9ogOeWF1vPNHC4ajnAsBa1dd39CQ=="
+  "version": "0.2.3",
+  "publishedAt": "2026-11-21T11:27:54.227Z",
+  "notes": "Chat is many times faster on small graphics cards (the chat model now leaves room on the card for her window and the desktop). Settings, Models works again and no longer offers downloads for models already set up. Setup no longer says Unable to uninstall when replacing an older Rosia. Install update says what stopped it instead of doing nothing. Quitting Rosia, or ending her in Task Manager, now also stops her server and models, quickly even on a busy computer.",
+  "url": "rosia-0.2.3.zip",
+  "sha256": "5c25ad9c6b9abb84c42ef1a9abe0e734bbc7fd2efb5a2eeb363172c4e20a9ad4",
+  "size": 574257,
+  "signature": "dtpq+1+p6Q2dVdNV1FB3lBJjq+3Kk8SlB/y/QaiXAtljuVOBYhUxiZnE1TjSeqkDDjVu8/C9EmEup7zMQTkNCQ=="
 }
