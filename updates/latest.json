@@ -1,10 +1,10 @@
 {
   "app": "rosia",
-  "version": "0.2.3",
-  "publishedAt": "2026-11-21T11:27:54.227Z",
-  "notes": "Chat is many times faster on small graphics cards (the chat model now leaves room on the card for her window and the desktop). Settings, Models works again and no longer offers downloads for models already set up. Setup no longer says Unable to uninstall when replacing an older Rosia. Install update says what stopped it instead of doing nothing. Quitting Rosia, or ending her in Task Manager, now also stops her server and models, quickly even on a busy computer.",
-  "url": "rosia-0.2.3.zip",
-  "sha256": "5c25ad9c6b9abb84c42ef1a9abe0e734bbc7fd2efb5a2eeb363172c4e20a9ad4",
-  "size": 574257,
-  "signature": "dtpq+1+p6Q2dVdNV1FB3lBJjq+3Kk8SlB/y/QaiXAtljuVOBYhUxiZnE1TjSeqkDDjVu8/C9EmEup7zMQTkNCQ=="
+  "version": "0.2.4",
+  "publishedAt": "2026-11-25T07:25:23.349Z",
+  "notes": "Models you download now start straight away (no restart), so she no longer stays offline after setup. Connecting Discord works on fresh installs (the Rosia plugin was missing from the installer). New: Settings, Diagnostics, Make a report for support; clearer messages when an antivirus blocks or removes her model files.",
+  "url": "rosia-0.2.4.zip",
+  "sha256": "b26fbdf37d0dae12e6ea49faddc0311ab3e8d16e6ee558a54954a126b9f2a6d6",
+  "size": 581955,
+  "signature": "ZGtgmXVHWZsriVtkJYwEtAHJSm1VczuIzaK9OGcZLsLC/lr5W+dUP0imBFyJ31cAbd1WrC5kwS7SxWdy8sB1Ag=="
 }
