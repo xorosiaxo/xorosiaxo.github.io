@@ -1,10 +1,10 @@
 {
   "app": "rosia",
-  "version": "0.2.4",
-  "publishedAt": "2026-11-25T07:25:23.349Z",
-  "notes": "Models you download now start straight away (no restart), so she no longer stays offline after setup. Connecting Discord works on fresh installs (the Rosia plugin was missing from the installer). New: Settings, Diagnostics, Make a report for support; clearer messages when an antivirus blocks or removes her model files.",
-  "url": "rosia-0.2.4.zip",
-  "sha256": "b26fbdf37d0dae12e6ea49faddc0311ab3e8d16e6ee558a54954a126b9f2a6d6",
-  "size": 581955,
-  "signature": "ZGtgmXVHWZsriVtkJYwEtAHJSm1VczuIzaK9OGcZLsLC/lr5W+dUP0imBFyJ31cAbd1WrC5kwS7SxWdy8sB1Ag=="
+  "version": "0.2.5",
+  "publishedAt": "2026-11-25T09:44:35.787Z",
+  "notes": "Model and ComfyUI downloads work on any connection (no more 'answered 403'). Setup now opens whenever she is not set up, and a notice in the chat brings it back. New: a short tour of the app. Faster replies on laptops with two graphics chips. Clearer Discord setup.",
+  "url": "rosia-0.2.5.zip",
+  "sha256": "353210317c926f6ec941f218d67f7f919266350554b494b1b7e9508e13208a88",
+  "size": 589680,
+  "signature": "Z5G0ov1rsc/G/mb6xfjJKjIvTGD4A5BOG1EtdDF0ryRwUHCAerrWKA0rkZxrIjySH+/YthvG0zldQzC9r2itBQ=="
 }
